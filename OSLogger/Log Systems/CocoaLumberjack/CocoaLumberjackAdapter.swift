@@ -51,15 +51,14 @@ import CocoaLumberjack
     }
 
     func startFileLogger() {
-        if let fileLogger = DDFileLogger() {
-            fileLogger.logFormatter = CocoaLumberjackFormatter()
-            fileLogger.rollingFrequency = 60 * 60 * 24// 24 hour rolling
-            fileLogger.maximumFileSize = 50000000;
-            fileLogger.logFileManager.maximumNumberOfLogFiles = 3
-            // Maybe it is better to append to a file in case we want previous launch information.
-            //fileLogger.doNotReuseLogFiles = true
-            logger.add(fileLogger, with: logLevel.ddLogLevel())
-        }
+        let fileLogger = DDFileLogger()
+        fileLogger.logFormatter = CocoaLumberjackFormatter()
+        fileLogger.rollingFrequency = 60 * 60 * 24// 24 hour rolling
+        fileLogger.maximumFileSize = 50000000;
+        fileLogger.logFileManager.maximumNumberOfLogFiles = 3
+        // Maybe it is better to append to a file in case we want previous launch information.
+        //fileLogger.doNotReuseLogFiles = true
+        logger.add(fileLogger, with: logLevel.ddLogLevel())
     }
 
     func getLogFiles() -> [URL] {
@@ -69,9 +68,8 @@ import CocoaLumberjack
 
         var fileURL: URL?
 
-        if let fileLogger = fileLoggers.last as? DDFileLogger,
-           let filePath = fileLogger.currentLogFileInfo.filePath {
-
+        if let fileLogger = fileLoggers.last as? DDFileLogger {
+            let filePath = fileLogger.currentLogFileInfo.filePath
             fileURL = URL(fileURLWithPath: filePath)
         }
 

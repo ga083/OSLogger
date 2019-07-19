@@ -8,11 +8,11 @@
 
 import Foundation
 
-@objc public enum LogLevel: UInt {
+@objc enum LogLevel: UInt {
     case error = 1, warning, info, debug, verbose
 }
 
-@objc public protocol OSLogger {
+@objc protocol OSLogger {
     static func error(_ message: String)
     static func warn(_ message: String)
     static func info(_ message: String)

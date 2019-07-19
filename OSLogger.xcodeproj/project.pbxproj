@@ -11,6 +11,7 @@
 		1604115D22E11F3100AB462E /* CocoaLumberjackAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604115C22E11F3100AB462E /* CocoaLumberjackAdapter.swift */; };
 		1604115F22E11F3F00AB462E /* CocoaLumberjackFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604115E22E11F3F00AB462E /* CocoaLumberjackFormatter.swift */; };
 		1604116222E11FA200AB462E /* LogFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604116122E11FA200AB462E /* LogFunctions.swift */; };
+		5A0EC9D50E8B6CF2A77324DA /* libPods-OSLogger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF55EEF3DE0067DB7E9EBF /* libPods-OSLogger.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,12 +27,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02F64AAF0C5F96B20AB21F2F /* Pods-OSLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSLogger.release.xcconfig"; path = "Target Support Files/Pods-OSLogger/Pods-OSLogger.release.xcconfig"; sourceTree = "<group>"; };
 		1604115022E11DA600AB462E /* libOSLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOSLogger.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1604115322E11DA600AB462E /* OSLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogger.swift; sourceTree = "<group>"; };
 		1604115C22E11F3100AB462E /* CocoaLumberjackAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaLumberjackAdapter.swift; sourceTree = "<group>"; };
 		1604115E22E11F3F00AB462E /* CocoaLumberjackFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaLumberjackFormatter.swift; sourceTree = "<group>"; };
 		1604116022E11FA200AB462E /* LogFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogFunctions.h; sourceTree = "<group>"; };
 		1604116122E11FA200AB462E /* LogFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFunctions.swift; sourceTree = "<group>"; };
+		4CAF55EEF3DE0067DB7E9EBF /* libPods-OSLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OSLogger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FB97C8FED268CBB76988304 /* Pods-OSLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSLogger.debug.xcconfig"; path = "Target Support Files/Pods-OSLogger/Pods-OSLogger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A0EC9D50E8B6CF2A77324DA /* libPods-OSLogger.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,8 @@
 			children = (
 				1604115222E11DA600AB462E /* OSLogger */,
 				1604115122E11DA600AB462E /* Products */,
+				8D62C9EAE24D7F91FA067C83 /* Pods */,
+				477C84F01F2E25744DB1DE32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +96,23 @@
 			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
+		477C84F01F2E25744DB1DE32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF55EEF3DE0067DB7E9EBF /* libPods-OSLogger.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D62C9EAE24D7F91FA067C83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FB97C8FED268CBB76988304 /* Pods-OSLogger.debug.xcconfig */,
+				02F64AAF0C5F96B20AB21F2F /* Pods-OSLogger.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,6 +120,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1604115722E11DA600AB462E /* Build configuration list for PBXNativeTarget "OSLogger" */;
 			buildPhases = (
+				770ED75DCD3F3DF2F81A8614 /* [CP] Check Pods Manifest.lock */,
 				1604114C22E11DA600AB462E /* Sources */,
 				1604114D22E11DA600AB462E /* Frameworks */,
 				1604114E22E11DA600AB462E /* CopyFiles */,
@@ -140,6 +165,31 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		770ED75DCD3F3DF2F81A8614 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OSLogger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1604114C22E11DA600AB462E /* Sources */ = {
@@ -274,10 +324,11 @@
 		};
 		1604115822E11DA600AB462E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FB97C8FED268CBB76988304 /* Pods-OSLogger.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LDVQUVL36B;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -287,10 +338,11 @@
 		};
 		1604115922E11DA600AB462E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02F64AAF0C5F96B20AB21F2F /* Pods-OSLogger.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LDVQUVL36B;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

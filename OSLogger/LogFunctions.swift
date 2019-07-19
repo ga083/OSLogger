@@ -16,6 +16,8 @@
  it will affect every log across the app.
  **/
 
+import Foundation
+
 public func CPLogError(_ message: String) {
     CocoaLumberjackAdapter.error(message)
 }

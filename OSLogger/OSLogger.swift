@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc enum LogLevel: UInt {
+@objc public enum LogLevel: UInt {
     case error = 1, warning, info, debug, verbose
 }
 

@@ -9,48 +9,48 @@
 import UIKit
 import CocoaLumberjack
 
-@objc class CocoaLumberjackAdapter: NSObject, OSLogger {
+@objc public class CocoaLumberjackAdapter: NSObject, OSLogger {
     var logger: DDLog // Needs internal access to use dependency inyection in unit tests.
     private var logLevel = LogLevel.warning
 
-    static func error(_ message: String) {
+    static public func error(_ message: String) {
         DDLogError(message)
     }
 
-    static func warn(_ message: String) {
+    static public func warn(_ message: String) {
         DDLogWarn(message)
     }
 
-    static func info(_ message: String) {
+    static public func info(_ message: String) {
         DDLogInfo(message)
     }
 
-    static func debug(_ message: String) {
+    static public func debug(_ message: String) {
         DDLogDebug(message)
     }
 
-    static func verbose(_ message: String) {
+    static public func verbose(_ message: String) {
         DDLogVerbose(message)
     }
 
-    override init() {
+    override public init() {
         logger = DDLog.sharedInstance
 
         super.init()
     }
 
-    required convenience init(logLevel: LogLevel = .warning) {
+    required convenience public init(logLevel: LogLevel = .warning) {
         self.init()
         self.logLevel = logLevel
     }
 
-    func startConsoleLogger() {
+    public func startConsoleLogger() {
         let ttyLogger = DDTTYLogger()
         ttyLogger.logFormatter = CocoaLumberjackFormatter()
         logger.add(ttyLogger, with: logLevel.ddLogLevel())
     }
 
-    func startFileLogger() {
+    public func startFileLogger() {
         let fileLogger = DDFileLogger()
         fileLogger.logFormatter = CocoaLumberjackFormatter()
         fileLogger.rollingFrequency = 60 * 60 * 24// 24 hour rolling
@@ -61,7 +61,7 @@ import CocoaLumberjack
         logger.add(fileLogger, with: logLevel.ddLogLevel())
     }
 
-    func getLogFiles() -> [URL] {
+    public func getLogFiles() -> [URL] {
         let fileLoggers = logger.allLoggers.filter {
             return $0 is DDFileLogger
         }

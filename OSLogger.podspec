@@ -12,6 +12,7 @@ A log system that makes logging consistent on both Swift and Objective-C.
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.author = { "Alexander Solis" => "alexandersv@gmail.com" }
   s.source = { :git => "https://github.com/ga083/OSLogger.git", :tag => "#{s.version}" }
-  s.source_files = "OSLogger", "OSLogger/**/*.{h,m}"
+  s.source_files = "OSLogger", "OSLogger/**/*.{h,m}", "OSLogger/Log Systems/CocoaLumberjack"
   s.framework = "Foundation"
+  s.dependency 'CocoaLumberjack/Swift', '3.5.3'
 end

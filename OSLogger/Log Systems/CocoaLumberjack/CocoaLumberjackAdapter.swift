@@ -1,5 +1,4 @@
 //
-//  OSLogger.swift
 //  OSLogger
 //
 //  Created by Alexander Solis on 7/18/19.

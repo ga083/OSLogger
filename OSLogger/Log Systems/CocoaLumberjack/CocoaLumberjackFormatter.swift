@@ -1,5 +1,4 @@
 //
-//  OSLogger.swift
 //  OSLogger
 //
 //  Created by Alexander Solis on 7/18/19.
@@ -37,11 +36,7 @@ class CocoaLumberjackFormatter: NSObject, DDLogFormatter {
 
         let timestamp = dateFormmater.string(from: logMessage.timestamp)
         let logMsg = logMessage.message
-        //let lineNumber = logMessage.line
-        //let file = logMessage.fileName
-        //let functionName = logMessage.function
-
-        //return "\(logLevel): \(timestamp) [\(file):\(lineNumber)] [\(functionName ?? "")] - \(logMsg)"
+        
         return "\(timestamp): \(logLevel) - \(logMsg)"
     }
 

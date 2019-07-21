@@ -10,29 +10,30 @@ import UIKit
 import CocoaLumberjack
 
 @objc public class CocoaLumberjackAdapter: NSObject, OSLogger {
+    
     var logger: DDLog // Needs internal access to use dependency inyection in unit tests.
     private var logLevel = LogLevel.warning
 
-    static public func error(_ message: String) {
+    public static func error(_ message: String) {
         DDLogError(message)
     }
-
-    static public func warn(_ message: String) {
+    
+    public static func warn(_ message: String) {
         DDLogWarn(message)
     }
-
-    static public func info(_ message: String) {
+    
+    public static func info(_ message: String) {
         DDLogInfo(message)
     }
-
-    static public func debug(_ message: String) {
+    
+    public static func debug(_ message: String) {
         DDLogDebug(message)
     }
-
-    static public func verbose(_ message: String) {
+    
+    public static func verbose(_ message: String) {
         DDLogVerbose(message)
     }
-
+    
     override public init() {
         logger = DDLog.sharedInstance
 

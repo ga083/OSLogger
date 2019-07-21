@@ -1,7 +1,11 @@
 platform :ios, '10.0'
 
+use_frameworks!
+
 pod 'CocoaLumberjack/Swift', '3.5.3'
 
 target 'OSLogger' do
-#  use_frameworks!
+  target 'OSLoggerTests' do
+    # Pods for testing
+  end
 end

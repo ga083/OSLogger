@@ -18,22 +18,22 @@
 
 import Foundation
 
-public func CPLogError(_ message: String) {
+public func OSLogError(_ message: String) {
     CocoaLumberjackAdapter.error(message)
 }
 
-public func CPLogWarn(_ message: String) {
+public func OSLogWarn(_ message: String) {
     CocoaLumberjackAdapter.warn(message)
 }
 
-public func CPLogInfo(_ message: String) {
+public func OSLogInfo(_ message: String) {
     CocoaLumberjackAdapter.info(message)
 }
 
-public func CPLogDebug(_ message: String) {
+public func OSLogDebug(_ message: String) {
     CocoaLumberjackAdapter.debug(message)
 }
 
-public func CPLogVerbose(_ message: String) {
+public func OSLogVerbose(_ message: String) {
     CocoaLumberjackAdapter.verbose(message)
 }

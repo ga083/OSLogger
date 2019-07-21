@@ -11,8 +11,21 @@
 		1604115D22E11F3100AB462E /* CocoaLumberjackAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604115C22E11F3100AB462E /* CocoaLumberjackAdapter.swift */; };
 		1604115F22E11F3F00AB462E /* CocoaLumberjackFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604115E22E11F3F00AB462E /* CocoaLumberjackFormatter.swift */; };
 		1604116222E11FA200AB462E /* LogFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604116122E11FA200AB462E /* LogFunctions.swift */; };
-		5A0EC9D50E8B6CF2A77324DA /* libPods-OSLogger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF55EEF3DE0067DB7E9EBF /* libPods-OSLogger.a */; };
+		16422E3122E3D7F300036E39 /* libOSLogger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1604115022E11DA600AB462E /* libOSLogger.a */; };
+		16422E3822E3D83A00036E39 /* CocoaLumberjackAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16422E3722E3D83A00036E39 /* CocoaLumberjackAdapterTests.swift */; };
+		34C2E0F62D10C6CA92D59421 /* Pods_OSLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CC79A298FA0208A51D2815 /* Pods_OSLogger.framework */; };
+		C8DD1A0FDACB59C92397EE94 /* Pods_OSLogger_OSLoggerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3454B845A5DDFB853A6E6E5 /* Pods_OSLogger_OSLoggerTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16422E3222E3D7F300036E39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1604114822E11DA600AB462E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1604114F22E11DA600AB462E;
+			remoteInfo = OSLogger;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1604114E22E11DA600AB462E /* CopyFiles */ = {
@@ -32,10 +45,18 @@
 		1604115322E11DA600AB462E /* OSLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogger.swift; sourceTree = "<group>"; };
 		1604115C22E11F3100AB462E /* CocoaLumberjackAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaLumberjackAdapter.swift; sourceTree = "<group>"; };
 		1604115E22E11F3F00AB462E /* CocoaLumberjackFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaLumberjackFormatter.swift; sourceTree = "<group>"; };
-		1604116022E11FA200AB462E /* LogFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogFunctions.h; sourceTree = "<group>"; };
 		1604116122E11FA200AB462E /* LogFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFunctions.swift; sourceTree = "<group>"; };
-		4CAF55EEF3DE0067DB7E9EBF /* libPods-OSLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OSLogger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16422E2C22E3D7F300036E39 /* OSLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16422E3022E3D7F300036E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16422E3722E3D83A00036E39 /* CocoaLumberjackAdapterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaLumberjackAdapterTests.swift; sourceTree = "<group>"; };
+		1647B00B22E2ACA20016E539 /* LogFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogFunctions.h; sourceTree = "<group>"; };
 		8FB97C8FED268CBB76988304 /* Pods-OSLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSLogger.debug.xcconfig"; path = "Target Support Files/Pods-OSLogger/Pods-OSLogger.debug.xcconfig"; sourceTree = "<group>"; };
+		A980F62149E076C169813814 /* Pods-OSLoggerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSLoggerTests.debug.xcconfig"; path = "Target Support Files/Pods-OSLoggerTests/Pods-OSLoggerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C289C0ED8C7AC25DE83E5104 /* Pods-OSLogger-OSLoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSLogger-OSLoggerTests.release.xcconfig"; path = "Target Support Files/Pods-OSLogger-OSLoggerTests/Pods-OSLogger-OSLoggerTests.release.xcconfig"; sourceTree = "<group>"; };
+		F0C397D0D4A7CFE9FC02ADBF /* Pods-OSLoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSLoggerTests.release.xcconfig"; path = "Target Support Files/Pods-OSLoggerTests/Pods-OSLoggerTests.release.xcconfig"; sourceTree = "<group>"; };
+		F3454B845A5DDFB853A6E6E5 /* Pods_OSLogger_OSLoggerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSLogger_OSLoggerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F869126112621DC267BB367C /* Pods-OSLogger-OSLoggerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSLogger-OSLoggerTests.debug.xcconfig"; path = "Target Support Files/Pods-OSLogger-OSLoggerTests/Pods-OSLogger-OSLoggerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F9CC79A298FA0208A51D2815 /* Pods_OSLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +64,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A0EC9D50E8B6CF2A77324DA /* libPods-OSLogger.a in Frameworks */,
+				34C2E0F62D10C6CA92D59421 /* Pods_OSLogger.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16422E2922E3D7F300036E39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16422E3122E3D7F300036E39 /* libOSLogger.a in Frameworks */,
+				C8DD1A0FDACB59C92397EE94 /* Pods_OSLogger_OSLoggerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				1604115222E11DA600AB462E /* OSLogger */,
+				16422E2D22E3D7F300036E39 /* OSLoggerTests */,
 				1604115122E11DA600AB462E /* Products */,
 				8D62C9EAE24D7F91FA067C83 /* Pods */,
 				477C84F01F2E25744DB1DE32 /* Frameworks */,
@@ -64,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1604115022E11DA600AB462E /* libOSLogger.a */,
+				16422E2C22E3D7F300036E39 /* OSLoggerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,7 +105,7 @@
 			children = (
 				1604115A22E11EF900AB462E /* Log Systems */,
 				1604115322E11DA600AB462E /* OSLogger.swift */,
-				1604116022E11FA200AB462E /* LogFunctions.h */,
+				1647B00B22E2ACA20016E539 /* LogFunctions.h */,
 				1604116122E11FA200AB462E /* LogFunctions.swift */,
 			);
 			path = OSLogger;
@@ -96,10 +128,20 @@
 			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
+		16422E2D22E3D7F300036E39 /* OSLoggerTests */ = {
+			isa = PBXGroup;
+			children = (
+				16422E3722E3D83A00036E39 /* CocoaLumberjackAdapterTests.swift */,
+				16422E3022E3D7F300036E39 /* Info.plist */,
+			);
+			path = OSLoggerTests;
+			sourceTree = "<group>";
+		};
 		477C84F01F2E25744DB1DE32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4CAF55EEF3DE0067DB7E9EBF /* libPods-OSLogger.a */,
+				F9CC79A298FA0208A51D2815 /* Pods_OSLogger.framework */,
+				F3454B845A5DDFB853A6E6E5 /* Pods_OSLogger_OSLoggerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,6 +151,10 @@
 			children = (
 				8FB97C8FED268CBB76988304 /* Pods-OSLogger.debug.xcconfig */,
 				02F64AAF0C5F96B20AB21F2F /* Pods-OSLogger.release.xcconfig */,
+				A980F62149E076C169813814 /* Pods-OSLoggerTests.debug.xcconfig */,
+				F0C397D0D4A7CFE9FC02ADBF /* Pods-OSLoggerTests.release.xcconfig */,
+				F869126112621DC267BB367C /* Pods-OSLogger-OSLoggerTests.debug.xcconfig */,
+				C289C0ED8C7AC25DE83E5104 /* Pods-OSLogger-OSLoggerTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -134,6 +180,26 @@
 			productReference = 1604115022E11DA600AB462E /* libOSLogger.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		16422E2B22E3D7F300036E39 /* OSLoggerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16422E3622E3D7F300036E39 /* Build configuration list for PBXNativeTarget "OSLoggerTests" */;
+			buildPhases = (
+				18F7544FCAC2F56853637FCF /* [CP] Check Pods Manifest.lock */,
+				16422E2822E3D7F300036E39 /* Sources */,
+				16422E2922E3D7F300036E39 /* Frameworks */,
+				16422E2A22E3D7F300036E39 /* Resources */,
+				96299F8C131FFCB6B3EAC087 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16422E3322E3D7F300036E39 /* PBXTargetDependency */,
+			);
+			name = OSLoggerTests;
+			productName = OSLoggerTests;
+			productReference = 16422E2C22E3D7F300036E39 /* OSLoggerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -145,6 +211,10 @@
 				ORGANIZATIONNAME = Mellontec;
 				TargetAttributes = {
 					1604114F22E11DA600AB462E = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+					16422E2B22E3D7F300036E39 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -162,11 +232,44 @@
 			projectRoot = "";
 			targets = (
 				1604114F22E11DA600AB462E /* OSLogger */,
+				16422E2B22E3D7F300036E39 /* OSLoggerTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		16422E2A22E3D7F300036E39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXShellScriptBuildPhase section */
+		18F7544FCAC2F56853637FCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OSLogger-OSLoggerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		770ED75DCD3F3DF2F81A8614 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -189,6 +292,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		96299F8C131FFCB6B3EAC087 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OSLogger-OSLoggerTests/Pods-OSLogger-OSLoggerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OSLogger-OSLoggerTests/Pods-OSLogger-OSLoggerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OSLogger-OSLoggerTests/Pods-OSLogger-OSLoggerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -203,7 +323,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		16422E2822E3D7F300036E39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16422E3822E3D83A00036E39 /* CocoaLumberjackAdapterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16422E3322E3D7F300036E39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1604114F22E11DA600AB462E /* OSLogger */;
+			targetProxy = 16422E3222E3D7F300036E39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1604115522E11DA600AB462E /* Debug */ = {
@@ -326,11 +462,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8FB97C8FED268CBB76988304 /* Pods-OSLogger.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LDVQUVL36B;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -340,11 +483,57 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 02F64AAF0C5F96B20AB21F2F /* Pods-OSLogger.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LDVQUVL36B;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		16422E3422E3D7F300036E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F869126112621DC267BB367C /* Pods-OSLogger-OSLoggerTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LDVQUVL36B;
+				INFOPLIST_FILE = OSLoggerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mellon.OSLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16422E3522E3D7F300036E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C289C0ED8C7AC25DE83E5104 /* Pods-OSLogger-OSLoggerTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LDVQUVL36B;
+				INFOPLIST_FILE = OSLoggerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mellon.OSLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -367,6 +556,15 @@
 			buildConfigurations = (
 				1604115822E11DA600AB462E /* Debug */,
 				1604115922E11DA600AB462E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16422E3622E3D7F300036E39 /* Build configuration list for PBXNativeTarget "OSLoggerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16422E3422E3D7F300036E39 /* Debug */,
+				16422E3522E3D7F300036E39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -10,7 +10,6 @@ import XCTest
 import CocoaLumberjack
 @testable import OSLogger
 
-
 class CocoaLumberjackAdapterTests: XCTestCase {
     var mockDDLog: MockDDLog!
     

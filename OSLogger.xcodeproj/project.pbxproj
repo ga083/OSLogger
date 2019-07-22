@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -131,10 +131,18 @@
 		16422E2D22E3D7F300036E39 /* OSLoggerTests */ = {
 			isa = PBXGroup;
 			children = (
-				16422E3722E3D83A00036E39 /* CocoaLumberjackAdapterTests.swift */,
+				16BA14AC22E3F154007F3650 /* Log System Tests */,
 				16422E3022E3D7F300036E39 /* Info.plist */,
 			);
 			path = OSLoggerTests;
+			sourceTree = "<group>";
+		};
+		16BA14AC22E3F154007F3650 /* Log System Tests */ = {
+			isa = PBXGroup;
+			children = (
+				16422E3722E3D83A00036E39 /* CocoaLumberjackAdapterTests.swift */,
+			);
+			path = "Log System Tests";
 			sourceTree = "<group>";
 		};
 		477C84F01F2E25744DB1DE32 /* Frameworks */ = {

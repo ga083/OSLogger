@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.swift_version = "5.0"
   s.name = "OSLogger"
-  s.version = "0.1.2"
+  s.version = "1.0.0"
   s.summary = "Objective-C and Swift logger"
   s.description = <<-DESC
 A log system that makes logging consistent on both Swift and Objective-C.

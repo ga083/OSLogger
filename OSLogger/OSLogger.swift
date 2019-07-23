@@ -12,7 +12,7 @@ import Foundation
     case error = 1, warning, info, debug, verbose
 }
 
-@objc protocol OSLogger {
+@objc public protocol OSLogger {
     static func error(_ message: String)
     static func warn(_ message: String)
     static func info(_ message: String)

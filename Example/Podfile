@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'OSLoggerExample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for OSLoggerExample
+  pod 'OSLogger', :path => '~/src/OSLogger'
+
+  target 'OSLoggerExampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'OSLoggerExampleUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

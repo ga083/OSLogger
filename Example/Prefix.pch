@@ -1,0 +1,4 @@
+//#ifdef __OBJC__
+//    #import <LogFunctions.h>
+//    #import <OSLogger/OSLogger-Swift.h>
+//#endif

@@ -6,7 +6,7 @@ target 'OSLoggerExample' do
   use_frameworks!
 
   # Pods for OSLoggerExample
-  pod 'OSLogger', :path => '~/src/OSLogger'
+  pod 'OSLogger'
 
   target 'OSLoggerExampleTests' do
     inherit! :search_paths

@@ -45,9 +45,9 @@ import CocoaLumberjack
     }
 
     public func startConsoleLogger() {
-        let ttyLogger = DDTTYLogger()
-        ttyLogger.logFormatter = CocoaLumberjackFormatter()
-        logger.add(ttyLogger, with: logLevel.ddLogLevel())
+        let ddosLogger = DDOSLogger.sharedInstance
+        ddosLogger.logFormatter = CocoaLumberjackFormatter()
+        logger.add(ddosLogger, with: logLevel.ddLogLevel())
     }
 
     public func startFileLogger() {
@@ -66,8 +66,8 @@ import CocoaLumberjack
 
         var fileURL: URL?
 
-        if let fileLogger = fileLoggers.last as? DDFileLogger {
-            let filePath = fileLogger.currentLogFileInfo.filePath
+        if let fileLogger = fileLoggers.last as? DDFileLogger,
+           let filePath = fileLogger.currentLogFileInfo?.filePath{
             fileURL = URL(fileURLWithPath: filePath)
         }
 

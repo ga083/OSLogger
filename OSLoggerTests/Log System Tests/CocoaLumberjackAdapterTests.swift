@@ -83,7 +83,7 @@ extension CocoaLumberjackAdapterTests {
         override var allLoggers: [DDLogger] {
             get {
                 let fileLogger = DDFileLogger()
-                filePath = URL(fileURLWithPath: fileLogger.currentLogFileInfo.filePath)
+                filePath = URL(fileURLWithPath: fileLogger.currentLogFileInfo!.filePath)
                 return [fileLogger]
             }
         }

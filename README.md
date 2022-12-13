@@ -21,12 +21,14 @@ Import the module:
 import OSLogger
 ```
 
-Setup the logger, it is suggested to use the OSLogger protocol instead of the adapter directly. 
+Setup the logger, it is recommended to use the OSLogger protocol instead of the adapter directly. 
 ```swift
-let logger: OSLogger = CocoaLumberjackAdapter(logLevel: .info)
+let logger: OSLogger = CocoaLumberjackAdapter()
 
 logger.startConsoleLogger() // Should only be used when running from Xcode
 logger.startFileLogger()
+
+OSLoggerContainer.shared.addLogger(logger)
 ```
 
 To retrieve log files:
@@ -55,9 +57,12 @@ To import the module:
 
 Setup the logger, it is suggested to use the OSLogger protocol instead of the adapter directly. 
 ```objc
-id<OSLogger> logger = [[CocoaLumberjackAdapter alloc]  initWithLogLevel:LogLevelInfo];
+id<OSLogger> logger = [[CocoaLumberjackAdapter alloc]  initWithUserInfo:nil];
 [logger startConsoleLogger]; // Should only be used when running from Xcode
 [logger startFileLogger];
+
+// Add the logger adapter to the container.
+[[OSLoggerContainer shared] addLogger:logger];
 ```
 
 To retrieve log files:
@@ -81,10 +86,36 @@ The output will consist of the date, the message type (Info, Debug, Error, etc..
 
 ## TODO: More Adapters?
 
-Since OSLogger is a protocol, the library can be expanded to support other implementations such as Apple Framework logs:
-Swift: print()
-Objc: NSLog()
-or other implementations similar to Cocoalumberjack, the advantage is that a change like this, will require just a few lines of code changes in the main code of a project that uses OSLogger. 
+### Currently the project supports a ShipBook adapter as well:
+```swift
+let userInfo = [
+    "appId": "548a53c95e5",
+    "appKey": "d4ea3df4e6",
+    "userId": "123"
+]
+
+let shipBookAdapter = ShipBookAdapter(userInfo: userInfo)
+shipBookAdapter.startLogger()
+
+// Add the logger adapter to the container.
+OSLoggerContainer.shared().addLogger(shipBookAdapter)
+```
+
+```objc
+        NSDictionary *userInfo = @{
+            @"appId" : @"548a53c95e5",
+            @"appKey" : @"d4ea3df4e6",
+            @"userId" : "123"
+        };
+        
+        ShipBookAdapter *shipBookAdapter = [[ShipBookAdapter alloc] initWithUserInfo:userInfo];
+        [shipBookAdapter startLogger];
+        
+        // Add the logger adapter to the container.
+        [[OSLoggerContainer shared] addLogger:shipBookAdapter];
+```
+
+More adapters can be added by implementing the OSLogger protocol.
 
 ## License
 

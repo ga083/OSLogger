@@ -87,6 +87,7 @@ The output will consist of the date, the message type (Info, Debug, Error, etc..
 ## TODO: More Adapters?
 
 ### Currently the project supports a ShipBook adapter as well:
+#### Swift implementation
 ```swift
 let userInfo = [
     "appId": "548a53c95e5",
@@ -100,19 +101,19 @@ shipBookAdapter.startLogger()
 // Add the logger adapter to the container.
 OSLoggerContainer.shared().addLogger(shipBookAdapter)
 ```
-
+#### Objc implementation
 ```objc
-        NSDictionary *userInfo = @{
-            @"appId" : @"548a53c95e5",
-            @"appKey" : @"d4ea3df4e6",
-            @"userId" : "123"
-        };
+NSDictionary *userInfo = @{
+    @"appId" : @"548a53c95e5",
+    @"appKey" : @"d4ea3df4e6",
+    @"userId" : "123"
+};
         
-        ShipBookAdapter *shipBookAdapter = [[ShipBookAdapter alloc] initWithUserInfo:userInfo];
-        [shipBookAdapter startLogger];
+ShipBookAdapter *shipBookAdapter = [[ShipBookAdapter alloc] initWithUserInfo:userInfo];
+[shipBookAdapter startLogger];
         
-        // Add the logger adapter to the container.
-        [[OSLoggerContainer shared] addLogger:shipBookAdapter];
+// Add the logger adapter to the container.
+[[OSLoggerContainer shared] addLogger:shipBookAdapter];
 ```
 
 More adapters can be added by implementing the OSLogger protocol.

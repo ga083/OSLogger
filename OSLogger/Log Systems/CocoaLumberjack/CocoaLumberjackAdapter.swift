@@ -11,46 +11,45 @@ import CocoaLumberjack
 @objc public class CocoaLumberjackAdapter: NSObject, OSLogger {
     
     var logger: DDLog // Needs internal access to use dependency inyection in unit tests.
-    private var logLevel = LogLevel.warning
+    @objc public var logLevel = LogLevel.warning
 
-    public static func error(_ message: String) {
-        DDLogError(message)
-    }
-    
-    public static func warn(_ message: String) {
-        DDLogWarn(message)
-    }
-    
-    public static func info(_ message: String) {
-        DDLogInfo(message)
-    }
-    
-    public static func debug(_ message: String) {
-        DDLogDebug(message)
-    }
-    
-    public static func verbose(_ message: String) {
-        DDLogVerbose(message)
-    }
-    
     override public init() {
         logger = DDLog.sharedInstance
 
         super.init()
     }
 
-    required convenience public init(logLevel: LogLevel = .warning) {
+    required convenience public init(userInfo: [String: String]? = nil) {
         self.init()
-        self.logLevel = logLevel
     }
 
-    public func startConsoleLogger() {
+    public func error(_ message: String) {
+        DDLogError(message)
+    }
+    
+    public func warn(_ message: String) {
+        DDLogWarn(message)
+    }
+    
+    public func info(_ message: String) {
+        DDLogInfo(message)
+    }
+    
+    public func debug(_ message: String) {
+        DDLogDebug(message)
+    }
+    
+    public func verbose(_ message: String) {
+        DDLogVerbose(message)
+    }
+    
+    @objc public func startConsoleLogger() {
         let ddosLogger = DDOSLogger.sharedInstance
         ddosLogger.logFormatter = CocoaLumberjackFormatter()
         logger.add(ddosLogger, with: logLevel.ddLogLevel())
     }
 
-    public func startFileLogger() {
+    @objc public func startFileLogger() {
         let fileLogger = DDFileLogger()
         fileLogger.logFormatter = CocoaLumberjackFormatter()
         fileLogger.rollingFrequency = 60 * 60 * 24// 24 hour rolling

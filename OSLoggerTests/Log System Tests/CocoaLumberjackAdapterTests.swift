@@ -24,25 +24,27 @@ class CocoaLumberjackAdapterTests: XCTestCase {
     }
 
     func testTheDefaultConsoleLogLevelIsSetToWarning() {
-        let logger = CocoaLumberjackAdapter(logger: mockDDLog, logLevel: nil)
+        let logger = CocoaLumberjackAdapter(logger: mockDDLog)
         logger.startConsoleLogger()
         XCTAssertEqual(mockDDLog.logLevelSet!, DDLogLevel.warning)
     }
 
     func testTheDefaultFileLogLevelIsSetCorrectly() {
-        let logger = CocoaLumberjackAdapter(logger: mockDDLog, logLevel: nil)
+        let logger = CocoaLumberjackAdapter(logger: mockDDLog)
         logger.startFileLogger()
         XCTAssertEqual(mockDDLog.logLevelSet!, DDLogLevel.warning)
     }
 
     func testTheConsoleLogLevelIsSetCorrectly() {
-        let logger = CocoaLumberjackAdapter(logger: mockDDLog, logLevel: LogLevel.error)
+        let logger = CocoaLumberjackAdapter(logger: mockDDLog)
+        logger.logLevel = LogLevel.error
         logger.startConsoleLogger()
         XCTAssertEqual(mockDDLog.logLevelSet!, DDLogLevel.error)
     }
 
     func testTheFileLogLevelIsSetCorrectly() {
-        let logger = CocoaLumberjackAdapter(logger: mockDDLog, logLevel: LogLevel.verbose)
+        let logger = CocoaLumberjackAdapter(logger: mockDDLog)
+        logger.logLevel = LogLevel.verbose
         logger.startFileLogger()
         XCTAssertEqual(mockDDLog.logLevelSet!, DDLogLevel.verbose)
     }
@@ -52,19 +54,19 @@ class CocoaLumberjackAdapterTests: XCTestCase {
     }
 
     func testTheConsoleLoggerIsAddedWhenTheLoggerStarts() {
-        let logger = CocoaLumberjackAdapter(logger: mockDDLog, logLevel: nil)
+        let logger = CocoaLumberjackAdapter(logger: mockDDLog)
         logger.startConsoleLogger()
         XCTAssertTrue(mockDDLog.loggerAdded)
     }
 
     func testTheFileLoggerIsAddedWhenTheLoggerStarts() {
-        let logger = CocoaLumberjackAdapter(logger: mockDDLog, logLevel: nil)
+        let logger = CocoaLumberjackAdapter(logger: mockDDLog)
         logger.startFileLogger()
         XCTAssertTrue(mockDDLog.loggerAdded)
     }
 
     func testLogsCanBeExtracted() {
-        let logger = CocoaLumberjackAdapter(logger: mockDDLog, logLevel: nil)
+        let logger = CocoaLumberjackAdapter(logger: mockDDLog)
         logger.startFileLogger()
         OSLogError("Hi there!")
 
@@ -96,13 +98,8 @@ extension CocoaLumberjackAdapterTests {
 }
 
 extension CocoaLumberjackAdapter {
-    convenience init(logger: DDLog, logLevel: LogLevel?) {
-        if let logLevel = logLevel {
-            self.init(logLevel: logLevel)
-        } else {
-            self.init()
-        }
-
+    convenience init(logger: DDLog) {
+        self.init()
         self.logger = logger
     }
 }

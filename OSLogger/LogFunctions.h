@@ -19,10 +19,10 @@
 #ifndef LogFunctions_h
 #define LogFunctions_h
 
-#define OSLogError(text, ...) [CocoaLumberjackAdapter error:[NSString stringWithFormat:(text), ##__VA_ARGS__]];
-#define OSLogWarn(text, ...) [CocoaLumberjackAdapter warn:[NSString stringWithFormat:(text), ##__VA_ARGS__]];
-#define OSLogInfo(text, ...) [CocoaLumberjackAdapter info:[NSString stringWithFormat:(text), ##__VA_ARGS__]];
-#define OSLogDebug(text, ...) [CocoaLumberjackAdapter debug:[NSString stringWithFormat:(text), ##__VA_ARGS__]];
-#define OSLogVerbose(text, ...) [CocoaLumberjackAdapter verbose:[NSString stringWithFormat:(text), ##__VA_ARGS__]];
+#define OSLogError(text, ...) [[OSLoggerContainer shared] error:[NSString stringWithFormat:(text), ##__VA_ARGS__]];
+#define OSLogWarn(text, ...) [[OSLoggerContainer shared] warn:[NSString stringWithFormat:(text), ##__VA_ARGS__]];
+#define OSLogInfo(text, ...) [[OSLoggerContainer shared] info:[NSString stringWithFormat:(text), ##__VA_ARGS__]];
+#define OSLogDebug(text, ...) [[OSLoggerContainer shared] debug:[NSString stringWithFormat:(text), ##__VA_ARGS__]];
+#define OSLogVerbose(text, ...) [[OSLoggerContainer shared] verbose:[NSString stringWithFormat:(text), ##__VA_ARGS__]];
 
 #endif /* LogFunctions_h */

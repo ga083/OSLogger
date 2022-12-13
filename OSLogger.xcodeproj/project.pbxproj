@@ -13,6 +13,10 @@
 		1604116222E11FA200AB462E /* LogFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604116122E11FA200AB462E /* LogFunctions.swift */; };
 		16422E3122E3D7F300036E39 /* libOSLogger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1604115022E11DA600AB462E /* libOSLogger.a */; };
 		16422E3822E3D83A00036E39 /* CocoaLumberjackAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16422E3722E3D83A00036E39 /* CocoaLumberjackAdapterTests.swift */; };
+		16B18C442942F07000A2F4D8 /* ShipBookAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B18C432942F07000A2F4D8 /* ShipBookAdapterTests.swift */; };
+		16C4CCC42942756C000B3FC0 /* OSLoggerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C4CCC32942756C000B3FC0 /* OSLoggerContainer.swift */; };
+		16C4CCC629427D8B000B3FC0 /* OSLoggerContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C4CCC529427D8B000B3FC0 /* OSLoggerContainerTests.swift */; };
+		16C4CCC92942CD80000B3FC0 /* ShipBookAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C4CCC82942CD80000B3FC0 /* ShipBookAdapter.swift */; };
 		34C2E0F62D10C6CA92D59421 /* Pods_OSLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CC79A298FA0208A51D2815 /* Pods_OSLogger.framework */; };
 		C8DD1A0FDACB59C92397EE94 /* Pods_OSLogger_OSLoggerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3454B845A5DDFB853A6E6E5 /* Pods_OSLogger_OSLoggerTests.framework */; };
 /* End PBXBuildFile section */
@@ -50,6 +54,10 @@
 		16422E3022E3D7F300036E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16422E3722E3D83A00036E39 /* CocoaLumberjackAdapterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaLumberjackAdapterTests.swift; sourceTree = "<group>"; };
 		1647B00B22E2ACA20016E539 /* LogFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogFunctions.h; sourceTree = "<group>"; };
+		16B18C432942F07000A2F4D8 /* ShipBookAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipBookAdapterTests.swift; sourceTree = "<group>"; };
+		16C4CCC32942756C000B3FC0 /* OSLoggerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLoggerContainer.swift; sourceTree = "<group>"; };
+		16C4CCC529427D8B000B3FC0 /* OSLoggerContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLoggerContainerTests.swift; sourceTree = "<group>"; };
+		16C4CCC82942CD80000B3FC0 /* ShipBookAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipBookAdapter.swift; sourceTree = "<group>"; };
 		8FB97C8FED268CBB76988304 /* Pods-OSLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSLogger.debug.xcconfig"; path = "Target Support Files/Pods-OSLogger/Pods-OSLogger.debug.xcconfig"; sourceTree = "<group>"; };
 		A980F62149E076C169813814 /* Pods-OSLoggerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSLoggerTests.debug.xcconfig"; path = "Target Support Files/Pods-OSLoggerTests/Pods-OSLoggerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C289C0ED8C7AC25DE83E5104 /* Pods-OSLogger-OSLoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSLogger-OSLoggerTests.release.xcconfig"; path = "Target Support Files/Pods-OSLogger-OSLoggerTests/Pods-OSLogger-OSLoggerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				1604115A22E11EF900AB462E /* Log Systems */,
+				16C4CCC32942756C000B3FC0 /* OSLoggerContainer.swift */,
 				1604115322E11DA600AB462E /* OSLogger.swift */,
 				1647B00B22E2ACA20016E539 /* LogFunctions.h */,
 				1604116122E11FA200AB462E /* LogFunctions.swift */,
@@ -114,6 +123,7 @@
 		1604115A22E11EF900AB462E /* Log Systems */ = {
 			isa = PBXGroup;
 			children = (
+				16C4CCC72942CD24000B3FC0 /* ShipBook */,
 				1604115B22E11F0200AB462E /* CocoaLumberjack */,
 			);
 			path = "Log Systems";
@@ -133,6 +143,7 @@
 			children = (
 				16BA14AC22E3F154007F3650 /* Log System Tests */,
 				16422E3022E3D7F300036E39 /* Info.plist */,
+				16C4CCC529427D8B000B3FC0 /* OSLoggerContainerTests.swift */,
 			);
 			path = OSLoggerTests;
 			sourceTree = "<group>";
@@ -141,8 +152,17 @@
 			isa = PBXGroup;
 			children = (
 				16422E3722E3D83A00036E39 /* CocoaLumberjackAdapterTests.swift */,
+				16B18C432942F07000A2F4D8 /* ShipBookAdapterTests.swift */,
 			);
 			path = "Log System Tests";
+			sourceTree = "<group>";
+		};
+		16C4CCC72942CD24000B3FC0 /* ShipBook */ = {
+			isa = PBXGroup;
+			children = (
+				16C4CCC82942CD80000B3FC0 /* ShipBookAdapter.swift */,
+			);
+			path = ShipBook;
 			sourceTree = "<group>";
 		};
 		477C84F01F2E25744DB1DE32 /* Frameworks */ = {
@@ -326,7 +346,9 @@
 			files = (
 				1604116222E11FA200AB462E /* LogFunctions.swift in Sources */,
 				1604115F22E11F3F00AB462E /* CocoaLumberjackFormatter.swift in Sources */,
+				16C4CCC92942CD80000B3FC0 /* ShipBookAdapter.swift in Sources */,
 				1604115422E11DA600AB462E /* OSLogger.swift in Sources */,
+				16C4CCC42942756C000B3FC0 /* OSLoggerContainer.swift in Sources */,
 				1604115D22E11F3100AB462E /* CocoaLumberjackAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +358,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				16422E3822E3D83A00036E39 /* CocoaLumberjackAdapterTests.swift in Sources */,
+				16C4CCC629427D8B000B3FC0 /* OSLoggerContainerTests.swift in Sources */,
+				16B18C442942F07000A2F4D8 /* ShipBookAdapterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

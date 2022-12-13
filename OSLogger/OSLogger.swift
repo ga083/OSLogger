@@ -13,16 +13,13 @@ import Foundation
 }
 
 @objc public protocol OSLogger {
-    static func error(_ message: String)
-    static func warn(_ message: String)
-    static func info(_ message: String)
-    static func debug(_ message: String)
-    static func verbose(_ message: String)
+    func error(_ message: String)
+    func warn(_ message: String)
+    func info(_ message: String)
+    func debug(_ message: String)
+    func verbose(_ message: String)
     
-    init(logLevel: LogLevel)
+    init(userInfo: [String: String]?)
     
-    func startConsoleLogger()
-    func startFileLogger()
-    
-    func getLogFiles() -> [URL]
+    @objc optional func getLogFiles() -> [URL]
 }

@@ -19,21 +19,21 @@
 import Foundation
 
 public func OSLogError(_ message: String) {
-    CocoaLumberjackAdapter.error(message)
+    OSLoggerContainer.shared.error(message)
 }
 
 public func OSLogWarn(_ message: String) {
-    CocoaLumberjackAdapter.warn(message)
+    OSLoggerContainer.shared.warn(message)
 }
 
 public func OSLogInfo(_ message: String) {
-    CocoaLumberjackAdapter.info(message)
+    OSLoggerContainer.shared.info(message)
 }
 
 public func OSLogDebug(_ message: String) {
-    CocoaLumberjackAdapter.debug(message)
+    OSLoggerContainer.shared.debug(message)
 }
 
 public func OSLogVerbose(_ message: String) {
-    CocoaLumberjackAdapter.verbose(message)
+    OSLoggerContainer.shared.verbose(message)
 }
